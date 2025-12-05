@@ -8,41 +8,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project_Draft
+namespace Pharmacy
 {
     public partial class Form1 : Form
     {
+        Timer timer;
+        private ListBox l;
         public Form1()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            l = listBox1;
+            // Initialize and configure the timer
+            timer = new Timer();
+            timer.Interval = 10000; // 10 seconds
+            timer.Tick += Timer_Tick;
+            timer.Start();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)
         {
+            // Stop the timer
+            timer.Stop();
 
+            // Show the login form
+            Login loginForm = new Login(l);
+            loginForm.ShowDialog(); // Show the login form as a modal dialog
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-            Form2 newForm = new Form2();
-
-          
-            newForm.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
