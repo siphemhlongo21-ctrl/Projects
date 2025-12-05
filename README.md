@@ -1,15 +1,10 @@
-Hotel Booking System
-Overview
-
-This is a Hotel Booking System built using C#. It allows users to browse hotels, make bookings, and manage reservations. Login details and booking data are stored temporarily during the session; no database is used.
+This is a Pharmacy System built using C#. It allows users to browse medicines, manage prescriptions, and handle pharmacy tasks. Login and user data are stored temporarily during runtime; no database is used.
 
 Features
 
-Browse available hotels and rooms
+Browse medicines and health products
 
-Make new bookings
-
-View and manage existing reservations during the session
+Manage prescriptions
 
 User login with temporary session storage
 
@@ -38,13 +33,11 @@ Usage
 
 Open the application.
 
-Register or login (credentials are temporary).
+Login or register (data is temporary).
 
-Browse hotels and select a room.
+Browse medicines and manage prescriptions.
 
-Enter booking details and confirm.
-
-Manage bookings while the program is running.
+Use the system while the program is running.
 
 Contributing
 
